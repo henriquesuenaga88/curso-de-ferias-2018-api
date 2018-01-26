@@ -1,17 +1,16 @@
 package matera.systems.cursoferias2018.api.resources;
 
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import matera.systems.cursoferias2018.api.domain.request.AtualizarUsuarioRequest;
 import matera.systems.cursoferias2018.api.domain.request.CriarUsuarioRequest;
 import matera.systems.cursoferias2018.api.domain.response.UsuarioResponse;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import matera.systems.cursoferias2018.api.repository.UsuarioRepositoryStub;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.UUID;
 
 public class UsuariosResourceIT {
 
