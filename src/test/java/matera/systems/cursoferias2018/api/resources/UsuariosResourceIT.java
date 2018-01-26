@@ -127,12 +127,12 @@ public class UsuariosResourceIT {
     private Header getAuthorizationHeader() {
 
         String clientBasicAuthCredentials =
-                Base64.getEncoder().encodeToString("angular:alunos".getBytes());
+                Base64.getEncoder().encodeToString("mobile:xurupita".getBytes());
 
         Response response = RestAssured.given().
                 header(new Header("Authorization", "Basic " + clientBasicAuthCredentials))
-                .queryParam("username", "admin")
-                .queryParam("password", "admin")
+                .queryParam("username", "aspect")
+                .queryParam("password", "bebezao")
                 .queryParam("grant_type", "password")
                 .when()
                 .post("http://localhost:8080/oauth/token")

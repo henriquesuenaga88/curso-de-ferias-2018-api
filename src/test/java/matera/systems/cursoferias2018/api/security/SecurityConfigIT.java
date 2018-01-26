@@ -53,8 +53,8 @@ public class SecurityConfigIT {
     public void autenticaComSucesso() {
 
         UsuarioLoginRequest usuarioLoginRequest= new UsuarioLoginRequest();
-        usuarioLoginRequest.setNome("admin");
-        usuarioLoginRequest.setSenha("admin");
+        usuarioLoginRequest.setNome("aspect");
+        usuarioLoginRequest.setSenha("bebezao");
 
         Response response = doLogin(usuarioLoginRequest);
 
@@ -67,7 +67,7 @@ public class SecurityConfigIT {
     private Response doLogin(UsuarioLoginRequest usuarioLoginRequest) {
 
         String clientBasicAuthCredentials =
-                Base64.getEncoder().encodeToString("angular:alunos".getBytes());
+                Base64.getEncoder().encodeToString("mobile:xurupita".getBytes());
 
         Response response = RestAssured.given().
                 header(new Header("Authorization", "Basic " + clientBasicAuthCredentials))
